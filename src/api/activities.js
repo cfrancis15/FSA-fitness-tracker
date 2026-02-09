@@ -45,11 +45,23 @@ export async function deleteActivity(token,activityId){
       "Content-Type": "application/json",
       Authorization: "Bearer " + token,
     },
-  });
+  }
+
+  
+);
+
+
 
   if (!response.ok) {
     const result = await response.json()
     throw Error(result.message);
+  
+    return response
   }
+
+
+
+  
+  
 
 }

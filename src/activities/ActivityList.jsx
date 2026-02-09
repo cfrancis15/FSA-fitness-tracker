@@ -20,12 +20,19 @@ export default function ActivityList({ activities, syncActivities }) {
   
 
   return (
+    <>{error && <p>{error}</p>}
+
+
     <ul>
+  
       {activities.map((activity) => (
         <><li key={activity.id}>{activity.name}</li>
         {token && <button onClick={()=>handleDelete(activity.id)}>Delete Listing</button>}
+        
         </>
       ))}
     </ul>
+    
+    </>
   );
 }
