@@ -20,7 +20,7 @@ export default function ActivityList({ activities, syncActivities }) {
   
 
   return (
-    <>{error && <p>{error}</p>}
+    <>{error && <h3>{error}</h3>}
 
 
     <ul>
